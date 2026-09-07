@@ -59,7 +59,7 @@ docker compose exec app php console migrate:fresh --seed
 ### 6. Acesse a aplicação
 
 ```text
-http://localhost:8095
+http://localhost:8095 (porta padrão)
 ```
 
 ---
