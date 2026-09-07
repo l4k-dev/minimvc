@@ -21,7 +21,7 @@ O projeto implementa, de forma simples, conceitos encontrados em frameworks maio
 
 ```bash
 git clone https://github.com/l4k-dev/minimvc.git
-cd mini-framework-php
+cd minimvc
 ```
 
 ### 2. Instale as dependências
