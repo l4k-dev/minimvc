@@ -1,0 +1,36 @@
+<?php
+
+require __DIR__ . '/vendor/autoload.php';
+
+define('BASE_PATH', __DIR__);
+
+$dotenv = Dotenv\Dotenv::createImmutable(BASE_PATH);
+$dotenv->load();
+
+$command = $argv[1] ?? null;
+
+switch ($command) {
+
+    case 'migrate':
+        (new \App\Core\Migration())->run();
+        break;
+
+    case 'migrate:fresh':
+        (new \App\Core\Migration())->fresh();
+
+        if (($argv[2] ?? null) === '--seed') {
+            foreach (glob(BASE_PATH . '/database/seeders/*.php') as $file) {
+                require $file;
+            }
+        }
+        break;
+
+    case 'seed':
+        foreach (glob(BASE_PATH . '/database/seeders/*.php') as $file) {
+            require $file;
+        }
+        break;
+
+    default:
+        echo "Comando inválido\n";
+}

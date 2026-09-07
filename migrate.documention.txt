@@ -1,0 +1,4 @@
+# o migrate e feito apartir do console, resetando todas tabelas e aplicando seeders
+# obs: só use em desenvolvimento, nunca em producão
+
+docker compose exec app php console migrate:fresh --seed
