@@ -20,7 +20,7 @@ O projeto implementa, de forma simples, conceitos encontrados em frameworks maio
 ### 1. Clone o projeto
 
 ```bash
-git clone https://github.com/l4k-dev/mini-framework-php.git
+git clone https://github.com/l4k-dev/minimvc.git
 cd mini-framework-php
 ```
 
