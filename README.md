@@ -29,7 +29,10 @@ cd minimvc
 ```bash
 composer install
 ```
+
+```bash
 Se usar docker -> docker run --rm -it -v "${PWD}:/app" -w /app composer:2 install
+```
 
 ### 3. Configure o ambiente
 
